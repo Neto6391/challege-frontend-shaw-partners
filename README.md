@@ -16,3 +16,7 @@
 ## Instructions to execute project
 - Please install yarn package;
 - yarn start
+
+## Observations
+* Before to run this project, run backend project is found this link here(https://github.com/Neto6391/challege-shaw-partners)
+* The door to run is 4000 and the door of back is 3000
