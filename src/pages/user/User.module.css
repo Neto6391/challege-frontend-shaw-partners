@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f6f8;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.darkMode {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  color: #f0f0f0;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #222;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #f0f0f0;
+}
+
+.darkModeToggle {
+  color: #f0f0f0;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.userCard {
+  width: calc(25% - 20px);
+  margin: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.userCard:hover {
+  background-color: #f5f5f5;
+}
+
+.userName {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.userInfo {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination button {
+  font-size: 16px;
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color: #222;
+  color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+  background-color: #444;
+}
+
+.pagination .Mui-selected {
+  background-color: #444 !important;
+}
+
+.pagination .Mui-selected:hover {
+  background-color: #666 !important;
+}
+
+@media (max-width: 768px) {
+  .userCard {
+    width: calc(50% - 20px);
+  }
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-top: 15px;
+}
+
+.searchInput {
+  width: 300px;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.searchButton {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.lightButton {
+  background-color: white;
+  color: black;
+}
