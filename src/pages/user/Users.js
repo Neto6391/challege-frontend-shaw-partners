@@ -58,9 +58,9 @@ const Users = () => {
         const response = await fetch(`https://api.github.com/users/${searchLogin}`);
         if (response.ok) {
           const user = await response.json();
-          setUsers([user]); // Define o usuário encontrado como a lista de usuários
+          setUsers([user]); 
         } else {
-          setUsers([]); // Limpa a lista de usuários se não encontrar
+          setUsers([]);
         }
       } catch (error) {
         console.error('Erro ao buscar usuário:', error);
@@ -112,8 +112,8 @@ const Users = () => {
         {users ? (
           users.map((user, index) => (
             <Card key={index} className={styles.userCard} onClick={() => {
-              setSelectedRepositoryUser(user); // Armazena os dados do usuário selecionado
-              setRepositoryModalOpen(true); // Abre o modal
+              setSelectedRepositoryUser(user); 
+              setRepositoryModalOpen(true);
             }}>
               <CardActionArea>
                 <CardMedia

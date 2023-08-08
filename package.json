@@ -5,8 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server .",
-    "build": "Webpack .",
-    "test": "test"
+    "build": "Webpack ."
   },
   "dependencies": {
     "@babel/cli": "^7.22.9",
