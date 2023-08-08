@@ -57,10 +57,14 @@ module.exports={
          * If multiple files share the same name but have different extensions, webpack will 
          * resolve the one with the extension listed first in the array and skip the rest. 
          * This is what enables users to leave off the extension when importing
+         * 
          */
+        alias: {
+            '@mui/styled-engine': '@mui/styled-engine-sc'
+        },
         extensions: ['.js','.jsx','.json'] 
     },
-    module:{
+    module: {
         /** "rules"
          * This says - "Hey webpack compiler, when you come across a path that resolves to a '.js or .jsx' 
          * file inside of a require()/import statement, use the babel-loader to transform it before you 
@@ -69,9 +73,14 @@ module.exports={
          */
         rules: [
             {
-                test: /\.(js|jsx)$/,    //kind of file extension this rule should look for and apply in test
+                test: /\.(js|jsx|css)$/,    //kind of file extension this rule should look for and apply in test
                 exclude: /node_modules/, //folder to be excluded
                 use:  'babel-loader' //loader which we are going to use
+            },
+            {
+                test: /\.(css)$/,    //kind of file extension this rule should look for and apply in test
+                exclude: /node_modules/, //folder to be excluded
+                use:  ['style-loader', 'css-loader'] //loader which we are going to use
             }
         ]
     }
